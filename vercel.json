@@ -12,10 +12,17 @@
   ],
   "routes": [
     {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*\\.ico|.*\\.png|.*\\.jpg|.*\\.svg)",
+      "dest": "/$1"
+    },
+    {
       "src": "/(.*)",
       "dest": "/index.html",
       "status": 200
     }
-  ],
-  "outputDirectory": "dist"
+  ]
 }
